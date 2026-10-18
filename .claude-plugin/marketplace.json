@@ -1,0 +1,24 @@
+{
+  "name": "binnacle",
+  "owner": {
+    "name": "Mark"
+  },
+  "description": "binnacle, the all-in-one Claude Code mod, and the plugins that build on it",
+  "plugins": [
+    {
+      "name": "binnacle",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mkloveyy/binnacle.git",
+        "path": "plugin",
+        "sha": "e92957dd1f4c5b45e9361080eb4171357af5ce56"
+      },
+      "description": "Adaptive status line, guards for risky commands, an activity record with diffs, transcript search, and a plugin interface"
+    },
+    {
+      "name": "binnacle-example-pack",
+      "source": "./plugins/binnacle-example-pack",
+      "description": "Example rule pack: refuses piping a download into a shell"
+    }
+  ]
+}

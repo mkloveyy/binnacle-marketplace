@@ -1,0 +1,8 @@
+{
+  "name": "binnacle-example-pack",
+  "version": "0.3.0",
+  "description": "Example binnacle rule pack: refuses piping a download straight into a shell; shows a footer button, a setting, an attention line and a tab in binnacle.",
+  "author": { "name": "ma_k" },
+  "license": "MIT",
+  "dependencies": ["binnacle"]
+}

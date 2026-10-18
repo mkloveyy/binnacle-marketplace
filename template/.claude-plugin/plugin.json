@@ -1,0 +1,9 @@
+{
+  "name": "binnacle-hello",
+  "version": "0.1.0",
+  "description": "A binnacle plugin: a footer button and a setting",
+  "author": { "name": "you" },
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "dependencies": ["binnacle@binnacle"]
+}

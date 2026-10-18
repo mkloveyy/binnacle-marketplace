@@ -1,0 +1,17 @@
+{
+  "name": "binnacle-hello",
+  "owner": {
+    "name": "you"
+  },
+  "description": "binnacle-hello: a binnacle plugin, published from its own repository",
+  "allowCrossMarketplaceDependenciesOn": [
+    "binnacle"
+  ],
+  "plugins": [
+    {
+      "name": "binnacle-hello",
+      "source": "./",
+      "description": "A binnacle plugin: a footer button and a setting"
+    }
+  ]
+}
