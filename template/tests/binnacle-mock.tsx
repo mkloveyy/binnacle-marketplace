@@ -86,7 +86,10 @@ export const binnacleMock: Plugin = {
     on('ui.render', { component: 'Pane' }, async ($, e, next) => {
       if (e.requestId !== 'binnacle-mock') return next(e)
       const { Box, Button } = $.ui.resolve(e)
-      const rowButtons = tabs.flatMap(t => t.rows.flatMap(r => [
+      // Rows under a row (`children`) are pressable in binnacle too: walked like the top level.
+      type MockRow = { id?: string; press?: boolean; buttons?: { id: string }[]; children?: unknown[] }
+      const walk = (rows: readonly MockRow[]): MockRow[] => rows.flatMap(r => [r, ...walk((r.children ?? []) as MockRow[])])
+      const rowButtons = tabs.flatMap(t => walk(t.rows).flatMap(r => [
         ...(r.press && r.id !== undefined ? [{ key: `row-${t.plugin}-${t.id}-${r.id}`, plugin: t.plugin, id: r.id }] : []),
         ...(r.buttons ?? []).map(b => ({ key: `rowbutton-${t.plugin}-${t.id}-${r.id ?? ''}-${b.id}`, plugin: t.plugin, id: b.id, row: r.id })),
       ]))
