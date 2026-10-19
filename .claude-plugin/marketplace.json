@@ -11,7 +11,7 @@
         "source": "git-subdir",
         "url": "https://github.com/mkloveyy/binnacle.git",
         "path": "plugin",
-        "sha": "7d4fcb2fb8eb82dc065fd4de3b8904f2a9aa990d"
+        "sha": "ea7ad5411ccc43448d41f4a62c68122306912eb8"
       },
       "description": "Adaptive status line, guards for risky commands, an activity record with diffs, transcript search, and a plugin interface"
     },
